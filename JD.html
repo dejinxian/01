@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD-Pimo</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin: auto;
+            padding: 0;
+        }
+        :root{
+            --fontred:red;
+        }
+        .font-red{
+            color:var(--fontred) ;
+        }
+        a{
+            color: rgb(89, 89, 90);
+        }
+        .clear{
+            clear: both;
+        }
+
+        /* 头部 */
+        .header{
+            /* width: 100vw; */
+            height: 30px;
+            background-color : rgba(227, 228, 229,0.8);
+        }
+        
+        /* header-grid */
+        .header-grid{
+            display: grid;
+            grid-template-columns: 50px minmax(150px,600px) 80px 80px 80px 80px 80px 80px 80px;
+            padding-left: 14rem;
+            padding-right: 14rem;
+        }
+        .header-item{
+            border-right: solid 2px rgb(146, 146, 179);
+            padding-right: 1rem;
+        }
+        .header-item:first-child,
+        .header-item:last-child
+        {
+            border-right: none;
+        }
+        .header-grid a{
+            font-size: 12px;
+            text-decoration: none;
+            
+        }
+        .header-grid a .font-red{
+            color:var(--fontred) ;
+        }
+        .header-item-login{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            padding-right: 0;  
+            margin-right: 0;
+        }
+        /* 搜索及导航 */
+        .search{
+            margin-top: 1rem;
+            padding-left: 14rem;
+            padding-right: 14rem;
+            /* width: 120px;
+            height: 120px; */
+            display: flex;
+        }
+        .search-side-logo{
+            margin: 0;
+        }
+        .search-item{
+            margin-top: 1rem;
+        }
+        .search-keyword{
+            margin-top: 0.5rem;
+            min-width: 60px;
+        }
+        .search-keyword .span-keyword-others{
+            font-size: 12px;
+            color: rgb(89, 89, 90);
+        }
+        .img-logo ,.search-side-ad{
+            width: 120px;
+            height: 120px;
+            border: solid #ccc 1px;
+            min-width: 120px;
+        }
+        #search-text{
+            width: 550px;
+            height: 30px;
+            margin-right: 20px;
+            margin-left: 0;
+            border: red 2px solid;
+        }
+        #myshippingcar{
+            display: inline-block;
+            width: 132px;
+            height: 30px;
+            border:#ccc 1px solid;
+            min-width: 132px;
+        }
+
+        /* nav */
+        #nav{
+            margin-top: -1.5rem;
+            margin-left: 24rem;
+            margin-right: 28rem;
+            min-width: 760px;
+        }
+        #nav ul{
+            display: flex;
+        }
+        #nav ul li{
+            list-style: none;
+            min-width: 50px;
+        }
+        #nav ul li a{
+            text-decoration: none;
+            font-size: 18px;
+        }
+        /* menu */
+        .menu{
+            margin-top: 2rem;
+            display: grid;
+            /* margin-left: 14;
+            margin-right: 14rem; */
+            padding-left: 14rem;
+            padding-right: 14rem;
+            grid-template-columns: 180px minmax(600px,600px) 180px 180px ;
+            grid-template-areas: 
+            'menu-main menu-slideshow menu-item-1 menu-item'
+            'menu-main menu-slideshow menu-item-2 menu-item'
+            'menu-main menu-slideshow menu-item-3 menu-item';
+            grid-gap: 0.5rem;
+            
+        }
+        .menu div{
+            border: 1px solid #ccc;
+            text-align: ;
+        }
+        .menu-main{
+            grid-area: menu-main;
+            min-width: 180px;
+            min-height: 455px;
+        }
+        .menu-slideshow{
+            grid-area: menu-slideshow;
+            min-width: 580px;
+            min-height: 455px;
+        }
+        .menu-item{
+            grid-area:  menu-item;
+            min-width: 180px;
+            min-height: 455px;
+        }
+        .menu-item-1,.menu-item-2,.menu-item-3{
+            min-width: 180px;
+            min-height: 145px;
+        }
+
+        /* @media(max-width:1180px){
+            .header-grid{
+            display: grid;
+            grid-template-columns: 80px 160px 80px 80px 80px 80px 80px 80px 80px;
+            padding-left: 5rem;
+            padding-right: 2rem;
+        } */
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <div class="header header-grid">
+                <div class="header-item">
+                    <i>
+                        <svg t="1629249079043" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1248" width="16" height="16">
+                            <path d="M808.6 403.2c0-178.8-129.8-308.5-308.5-308.5-170.1 0-308.5 138.4-308.5 308.5 0 125.6 170.6 338.3 262.3 452.6l6.8 8.4c9.6 12 24 18.9 39.5 18.9 15.4 0 29.8-6.9 39.5-18.9l6.8-8.4c91.5-114.3 262.1-327 262.1-452.6z m-310.1 89.4c-62.9 0-114-51.1-114-114s51.1-114 114-114 114 51.1 114 114-51.1 114-114 114z" fill="#FFFFFF" p-id="1249"></path>
+                            <path d="M500.1 67.8c-184.9 0-335.4 150.4-335.4 335.4 0 135 174.5 352.5 268.2 469.4l6.7 8.4c14.8 18.4 36.8 29 60.4 29s45.6-10.6 60.4-29l6.8-8.4C661 755.7 835.4 538.2 835.4 403.2c0-194.3-141-335.4-335.3-335.4z m0 815.3c-15.4 0-29.8-6.9-39.5-18.9l-6.8-8.4c-91.7-114.3-262.3-327-262.3-452.6 0-170.1 138.4-308.5 308.5-308.5 178.8 0 308.5 129.8 308.5 308.5 0 125.6-170.6 338.3-262.3 452.6l-6.8 8.4c-9.5 12-23.9 18.9-39.3 18.9z" fill="" p-id="1250"></path>
+                            <path d="M498.5 378.6m-87.2 0a87.2 87.2 0 1 0 174.4 0 87.2 87.2 0 1 0-174.4 0Z" fill="#FFFFFF" p-id="1251"></path><path d="M612.5 378.6c0-62.9-51.1-114-114-114s-114 51.1-114 114 51.1 114 114 114 114-51.1 114-114z m-201.2 0c0-48.1 39.1-87.2 87.2-87.2s87.2 39.1 87.2 87.2-39.1 87.2-87.2 87.2-87.2-39.1-87.2-87.2z" fill="" p-id="1252"></path>
+                        </svg>
+                    </i>
+                </div>
+                <div class="header-item header-item-login">
+                    
+                        <span><a href="#">你好，请登录</a></span> &nbsp;
+                        <span><a href="#" class="font-red">免费注册</a></span> &nbsp;&nbsp;
+                    
+                </div>
+                <div class="header-item">
+                    <a href="#">我的订单</a>
+                </div>
+                <div class="header-item">
+                    <a href="#">我的京东</a>
+                </div>
+                <div class="header-item">
+                    <a href="#">京东会员</a>
+                </div>
+                <div class="header-item">
+                    <a href="#" class="font-red">企业采购</a>
+                </div>
+                <div class="header-item">
+                    <a href="#">客户服务</a>
+                </div>
+                <div class="header-item">
+                    <a href="#">网站导航</a>
+                </div>
+                <div class="header-item">
+                    <a href="#">手机京东</a>
+                </div>
+            </div>
+            
+
+        
+        </div>
+
+        <!-- 搜索及导航 -->
+        <div class="search">
+            <aside class="search-side-logo">
+                <div class="img-logo">假装有图片</div>
+            </aside>
+
+            <div class="search-item">
+                <div style="min-width: 712px;">
+                    <input type="text" id="search-text">
+                    <input type="button" value="我的购物车" id="myshippingcar">
+                </div>
+                
+                <div class="search-keyword">
+                    <span class="span-keyword font-red">关键词1</span>&nbsp;
+                    <span class="span-keyword-others">关键词2</span>&nbsp;<span class="span-keyword-others">关键词3</span>&nbsp;
+                    <span class="span-keyword-others">关键词4</span>&nbsp;<span class="span-keyword-others">关键词5</span>&nbsp;
+                    <span class="span-keyword-others">关键词6</span>&nbsp;<span class="span-keyword-others">关键词7</span>&nbsp;
+                    <span class="span-keyword-others">关键词8</span>&nbsp;<span class="span-keyword-others">关键词9</span>
+                    <!-- <span class="font-red">关键词1 &nbsp;关键词2 &nbsp;关键词3 &nbsp;关键词4 &nbsp;</span> -->
+                </div>
+            </div>
+
+            <aside class="search-side-ad">
+                <div class="img-ad">假装有图片</div>
+            </aside>
+            
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#" class="font-red">秒杀</a></li>
+                <li><a href="#" class="font-red">优惠券</a></li>
+                <li><a href="#">PLUS会员</a></li>
+                <li><a href="#">品牌闪购</a></li>
+                <li><a href="#">拍卖</a></li>
+                <li><a href="#">京东家电</a></li>
+                <li><a href="#">京东超市</a></li>
+                <li><a href="#">京东生鲜</a></li>
+                <li><a href="#">京东国际</a></li>
+                <li><a href="#">京东云</a></li>
+            </ul>
+        </div>
+        
+        <!-- 菜单 -->
+        <div class="menu">
+            <div class="menu-main">主菜单</div>
+            <div class="menu-slideshow">轮播图</div>
+            <div class="menu-item-1">图1</div>
+            <div class="menu-item">侧菜单</div>
+            <div class="menu-main"></div>
+            <div class="menu-slideshow"></div>
+            <div class="menu-item-2">图2</div>
+            <div class="menu-item"></div>
+            <div class="menu-main"></div>
+            <div class="menu-slideshow"></div>
+            <div class="menu-item-3">图3</div>
+            <div class="menu-item"></div>
+
+        </div>
+
+        <!-- 秒杀 -->
+        <div class="seckill"></div>
+
+        <!-- 特价区 -->
+        <div class="special"></div>
+
+
+        <!-- 发现好货 -->
+        <div class="find"></div>
+
+
+        <!-- list -->
+        <div class="list">
+
+        </div>
+
+        <!-- 频道 -->
+        <div class="channel">
+
+        </div>
+
+        <!-- 推荐 -->
+        <div class="recommend">
+
+        </div>
+
+        <!-- logo -->
+        <div class="logo">
+
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="bottomnav">
+
+        </div>
+
+        <!-- 底页 -->
+        <div class="footer">
+
+        </div>
+
+        <!-- 左侧导航 -->
+        <div class="leftnav">
+
+        </div>
+
+
+        <!-- 右侧导航 -->
+        <div class="rightnav">
+
+        </div>
+    </div>
+
+</body>
+</html>
